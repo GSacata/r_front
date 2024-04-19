@@ -18,6 +18,23 @@ PASSOS
 
 
 TESTES
+Pelo back django REST (sem interação do front)
+[-] (GET) Pegar tarefas geral e tarefas específicas.
+[-] (POST) Criar uma tarefa, seguindo modelo correto
+[-] (PUT) Atualizar uma tarefa.
+[-] (DELETE) Apagar uma tarefa.
+
+Pelo front angular
+[ ] (GET) Pegar tarefas geral e tarefas específicas.
+[ ] (POST) Criar uma tarefa, seguindo modelo correto
+[ ] (PUT) Atualizar uma tarefa.
+[ ] (DELETE) Apagar uma tarefa.
+
+
+
+MELHORIAS
+[ ] Enriquecer corpo de tarefa com descrição.
+[ ] Melhorar corpo da tarefa com ID (por favor, né)
 
 
 
@@ -26,3 +43,6 @@ REFERÊNCIAS
 
 
 NOTAS
+Set-ExecutionPolicy Unrestricted -Scope Process
+cd frontend
+ng serve -o
