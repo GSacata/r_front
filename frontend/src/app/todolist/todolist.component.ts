@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MOCKTASKLIST } from '../misc/mock_todotasks';
 import { AppModule } from '../app.module';
+import { TodoapiService } from '../services/todoapi.service';
 
 @Component({
   selector: 'app-todolist',
@@ -13,5 +14,17 @@ import { AppModule } from '../app.module';
 })
 
 export class TodolistComponent {
-  todomocklist = MOCKTASKLIST; // Uses fake tasks for testing
+  task = MOCKTASKLIST; // Uses fake tasks for testing
+
+  getAllTasks() {
+    this.todoapi.getAllTasks().subscribe({
+      next: (data) => { this.task = data },
+      error: (err) => { console.log(err) },
+      complete: () => { console.log("Success: GET all tasks") }
+    })
+  }
+
+  constructor (private todoapi: TodoapiService) {
+    this.getAllTasks()
+  }
 }
