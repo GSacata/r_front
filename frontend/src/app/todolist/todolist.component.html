@@ -7,4 +7,6 @@
 <div>
     <p>Task Title: <input type="text" [(ngModel)]="selectedTask.task_title"></p>
     <p>Done: <input type="checkbox" [(ngModel)]="selectedTask.task_completion"></p>
+    <br>
+    <button (click)="editTask()">PUT</button>
 </div>

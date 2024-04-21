@@ -34,9 +34,21 @@ export class TodolistComponent {
     })
   }
 
+  editTask() {
+    //chama a função editTask, usando 'this.selectedTask' como parâmetro, para subcrever info em 'this.selectedTask'.
+    //basicamente, insere a tarefa no input para editá-la, e depois dar o PUT
+    this.todoapi.editTask(this.selectedTask).subscribe({
+      next: (data) => {
+        this.selectedTask = data
+      },
+      error: (err) => { console.log(err) },
+      complete: () => { console.log("Success: PUT one task") }
+    })
+  }
+
   constructor (private todoapi: TodoapiService) {
     this.getAllTasks()
-    
+
     //fills 'selectedTask' with empty info so it doesn't bug the page; opens empty fields for edition.
     this.selectedTask = { task_title: '', task_completion: false, task_created_at: '', task_updated_at: ''  }
   }
