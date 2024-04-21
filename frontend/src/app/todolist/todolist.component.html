@@ -5,8 +5,14 @@
 </ul>
 
 <div>
-    <p>Task Title: <input type="text" [(ngModel)]="selectedTask.task_title"></p>
-    <p>Done: <input type="checkbox" [(ngModel)]="selectedTask.task_completion"></p>
+    <p>
+        ID: {{selectedTask.id}}<br>
+        Task Title: <input type="text" [(ngModel)]="selectedTask.task_title"><br>
+        Done: <input type="checkbox" [(ngModel)]="selectedTask.task_completion"><br>
+        Created at: {{selectedTask.task_created_at}}<br>
+        Updated at: {{selectedTask.task_updated_at}}<br>
+    </p>
     <br>
     <button (click)="editTask()">PUT</button>
+    <button (click)="createTask()">POST</button>
 </div>

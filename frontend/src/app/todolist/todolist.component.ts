@@ -42,7 +42,15 @@ export class TodolistComponent {
         this.selectedTask = data
       },
       error: (err) => { console.log(err) },
-      complete: () => { console.log("Success: PUT one task") }
+      complete: () => { console.log("Success: PUT task") }
+    })
+  }
+
+  createTask() {
+    this.todoapi.createTask(this.selectedTask).subscribe({
+      next: (data) => { this.task.push(data) },
+      error: (err) => { console.log(err) },
+      complete: () => { console.log("Success: POST task") }
     })
   }
 

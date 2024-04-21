@@ -26,4 +26,9 @@ export class TodoapiService {
     const body = {task_title: task.task_title, task_completion: task.task_completion}
     return this.http.put(this.baseurl + `/todolist/${task.id}/`, body, {headers: this.httpHeaders})
   }
+
+  createTask(task: any): Observable<any> {
+    const body = {task_title: task.task_title, task_completion: task.task_completion}
+    return this.http.post(this.baseurl + `/todolist/`, body, {headers: this.httpHeaders})
+  }
 }
