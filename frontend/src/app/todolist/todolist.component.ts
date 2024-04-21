@@ -54,6 +54,14 @@ export class TodolistComponent {
     })
   }
 
+  deleteTask() {
+    this.todoapi.deleteTask(this.selectedTask.id).subscribe({
+      next: () => { this.getAllTasks() },
+      error: (err) => { console.log(err) },
+      complete: () => { console.log("Success: DEL one task") }
+    })
+  }
+
   constructor (private todoapi: TodoapiService) {
     this.getAllTasks()
 
