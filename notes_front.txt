@@ -14,7 +14,7 @@ Funcionalidades
 
 
 PASSOS
-
+.Criar botão "MarkAsDone()", que quando clicado, vai trocar o ícone e marcar a tarefa como concluída, ou não concluída.
 
 
 TESTES
