@@ -34,8 +34,8 @@ Pelo front angular
 
 MELHORIAS
 [ ] Enriquecer corpo de tarefa com descrição.
-[ ] Melhorar corpo da tarefa com ID (por favor, né)
-[ ] Refresh na página depois que um método for chamado, para dar um feedback mais imediato das mudanças.
+[-] Melhorar corpo da tarefa com ID (por favor, né)
+[-] Refresh na página depois que um método for chamado, para dar um feedback mais imediato das mudanças.
 
 
 

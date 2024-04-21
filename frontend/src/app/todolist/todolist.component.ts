@@ -20,7 +20,9 @@ export class TodolistComponent {
 
   getAllTasks() {
     this.todoapi.getAllTasks().subscribe({
-      next: (data) => { this.task = data },
+      next: (data) => {
+        this.task = data
+      },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: GET all tasks") }
     })
@@ -28,7 +30,9 @@ export class TodolistComponent {
 
   getOneTask(task: TodoTask) {
     this.todoapi.getOneTask(task.id).subscribe({
-      next: (data) => { this.selectedTask = data },
+      next: (data) => {
+        this.selectedTask = data
+      },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: GET one task") }
     })
@@ -40,6 +44,7 @@ export class TodolistComponent {
     this.todoapi.editTask(this.selectedTask).subscribe({
       next: (data) => {
         this.selectedTask = data
+        this.refreshPage()
       },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: PUT task") }
@@ -48,7 +53,10 @@ export class TodolistComponent {
 
   createTask() {
     this.todoapi.createTask(this.selectedTask).subscribe({
-      next: (data) => { this.task.push(data) },
+      next: (data) => {
+        this.task.push(data)
+        this.refreshPage()
+      },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: POST task") }
     })
@@ -56,10 +64,17 @@ export class TodolistComponent {
 
   deleteTask() {
     this.todoapi.deleteTask(this.selectedTask.id).subscribe({
-      next: () => { this.getAllTasks() },
+      next: () => {
+        // this.getAllTasks()
+        this.refreshPage()
+      },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: DEL one task") }
     })
+  }
+
+  refreshPage() {
+    window.location.reload()
   }
 
   constructor (private todoapi: TodoapiService) {
