@@ -17,3 +17,30 @@
     <button (click)="createTask()">POST</button>
     <button (click)="deleteTask()">DEL</button>
 </div>
+
+
+<section>
+    <div class="tdlst-body-div">
+        <h1 class="tdlst-main-title">To Do List</h1>
+        <div class="tdlst-crud">
+            <div class="tdlst-title-div">
+                <p>Create tasks</p>
+                <input class="tdlst-crud-tasktitle" type="text" [(ngModel)]="selectedTask.task_title" placeholder="Task Title">
+            </div>
+            <!-- <div class="tdlst-crud-buttonsdiv">
+                <button class="tdlst-button tdlst-create" (click)="createTask()">POST</button>
+                <button class="tdlst-button tdlst-edit" (click)="editTask()">PUT</button>
+                <button class="tdlst-button tdlst-remove" (click)="deleteTask()">DEL</button>
+            </div> -->
+            <!-- <table class="tdlst-crud-buttonsdiv"> -->
+            <table>
+                <tr class="tdlst-crud-buttonsdiv">
+                    <td><button class="tdlst-button tdlst-create" (click)="createTask()">POST</button></td>
+                    <td><button class="tdlst-button tdlst-edit" (click)="editTask()">PUT</button></td>
+                    <td><button class="tdlst-button tdlst-remove" (click)="deleteTask()">DEL</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+</section>

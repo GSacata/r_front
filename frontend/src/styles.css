@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 1000 */
+
+.roboto-flex {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+}
+
+p, h1, div {
+    font-family: "Roboto Flex", sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    /* display: table; */
+    width: 100%;
+}
+
+td {
+    width: 33%;
+    border: solid 1px #000000; /*DEV-ER*/
+    /* display: table-cell; */
+}
+
+.tdlst-main-title {
+    text-align: center;
+}
+
+.tdlst-body-div {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border: solid 1px #000000; /*DEV-ER*/
+}
+
+.tdlst-title-div {
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.tdlst-crud-tasktitle {
+    width: 100%;
+}
+
+.tdlst-crud-buttonsdiv {
+    text-align: center;
+}
+
+.tdlst-button {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 90%;
+    /* margin: auto; */
+}
