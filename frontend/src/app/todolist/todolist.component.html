@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- 
 <p>todolist works!</p>
 
 <ul *ngFor="let item of task">
@@ -16,9 +19,8 @@
     <button (click)="editTask()">PUT</button>
     <button (click)="createTask()">POST</button>
     <button (click)="deleteTask()">DEL</button>
-</div>
+</div> -->
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
 <section>
@@ -30,11 +32,13 @@
                 <input class="tdlst-crud-tasktitle" type="text" [(ngModel)]="selectedTask.task_title" placeholder="Task Title">
             </div>
             <table>
-                <tr class="tdlst-crud-buttonsdiv">
-                    <td><button class="tdlst-button tdlst-create" (click)="createTask()">POST</button></td>
-                    <td><button class="tdlst-button tdlst-edit" (click)="editTask()">PUT</button></td>
-                    <td><button class="tdlst-button tdlst-remove" (click)="deleteTask()">DEL</button></td>
-                </tr>
+                <tbody>
+                    <tr class="tdlst-crud-buttonsdiv">
+                        <td><button class="tdlst-button tdlst-create" (click)="createTask()">POST</button></td>
+                        <td><button class="tdlst-button tdlst-edit" (click)="editTask()">PUT</button></td>
+                        <td><button class="tdlst-button tdlst-remove" (click)="deleteTask()">DEL</button></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
