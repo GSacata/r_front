@@ -1,5 +1,10 @@
 <p>todolist works!</p>
 
 <ul *ngFor="let item of task">
-    <li>{{item.task_title}}</li>
+    <li>{{item.task_title}}; <span (click)="getOneTask(item)">|||GET ONE|||</span></li>
 </ul>
+
+<div>
+    <p>Task Title: <input type="text" [(ngModel)]="selectedTask.task_title"></p>
+    <p>Done: <input type="checkbox" [(ngModel)]="selectedTask.task_completion"></p>
+</div>
