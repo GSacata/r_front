@@ -65,6 +65,30 @@ td {
     text-align: center;
 }
 
+.tdlst-crud-editbody-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.tdlst-crud-editbody-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 16px;
+    width: 100%;
+}
+
+.tdlst-crud-editbody-2 > input {
+    font-size: 16px;
+}
+
+.tdlst-crud-taskcompletion {
+    /* width: 10%; */
+    margin-bottom: auto;
+    margin-right: 2rem;
+}
+
 .tdlst-crud-tasktitle {
     width: 100%;
 }

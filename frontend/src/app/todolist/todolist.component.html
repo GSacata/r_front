@@ -29,7 +29,17 @@
         <div class="tdlst-crud">
             <div class="tdlst-title-div">
                 <p>Create tasks</p>
-                <input class="tdlst-crud-tasktitle" type="text" [(ngModel)]="selectedTask.task_title" placeholder="Task Title">
+                <div class="tdlst-crud-editbody-1">
+                    <input class="tdlst-crud-taskcompletion" type="checkbox" [(ngModel)]="selectedTask.task_completion"><br>
+                    <div class="tdlst-crud-editbody-2">
+                        <input class="tdlst-crud-tasktitle" type="text" [(ngModel)]="selectedTask.task_title" placeholder="Task Title">
+                        <p *ngIf="selectedTask.id">
+                            <span>ID: {{selectedTask.id}}</span><br>
+                            <span>Created at: {{selectedTask.task_created_at}}</span><br>
+                            <span>Updated at: {{selectedTask.task_updated_at}}</span><br>
+                        </p>
+                    </div>
+                </div>
             </div>
             <table>
                 <tbody>
