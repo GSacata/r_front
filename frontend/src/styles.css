@@ -57,7 +57,7 @@ table {
 }
 
 td {
-    width: 33%;
+    width: 25%;
 }
 
 .tdlst-main-title {
@@ -131,6 +131,10 @@ td {
 }
 
 .tdlst-delete {
+    background-color: var(--prim-orange);
+}
+
+.tdlst-refresh {
     background-color: var(--prim-orange);
 }
 

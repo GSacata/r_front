@@ -44,7 +44,7 @@ export class TodolistComponent {
     this.todoapi.editTask(this.selectedTask).subscribe({
       next: (data) => {
         this.selectedTask = data
-        this.refreshPage()
+        this.refreshCrud()
       },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: PUT task") }
@@ -55,7 +55,7 @@ export class TodolistComponent {
     this.todoapi.createTask(this.selectedTask).subscribe({
       next: (data) => {
         this.task.push(data)
-        this.refreshPage()
+        this.refreshCrud()
       },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: POST task") }
@@ -66,15 +66,16 @@ export class TodolistComponent {
     this.todoapi.deleteTask(this.selectedTask.id).subscribe({
       next: () => {
         // this.getAllTasks()
-        this.refreshPage()
+        this.refreshCrud()
       },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: DEL one task") }
     })
   }
 
-  refreshPage() {
-    window.location.reload()
+  refreshCrud() {
+    // window.location.reload()
+    this.selectedTask = { task_title: '', task_completion: false, task_created_at: '', task_updated_at: ''  }
   }
 
   constructor (private todoapi: TodoapiService) {
