@@ -114,6 +114,7 @@ td {
     border-radius: 3px;
     border: solid 1px var(--secondary);
     margin-bottom: 1rem;
+    line-height: 2;
 }
 
 .tdlst-crud-taskdesc {

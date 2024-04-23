@@ -1,3 +1,18 @@
+CLONANDO E ATIVANDO O PROJETO
+PASSO A PASSO
+0. (Windows) Certifique-se de ter instalado em seu computador o Node.js e NPM, gerenciador de pacotes.
+1. Em seu git bash, usar "git clone 'link_deste_repositorio'";
+2. Em seu terminal, use os seguintes comandos entre aspas duplas, na ordem:
+3. "Set-ExecutionPolicy Unrestricted -Scope Process" (caso seu computador não permita execuções de scripts 'externos', essa linha permitirá a execução enquanto o terminal estiver aberto);
+4. Entre na pasta do projeto com "cd frontend";
+5. Use o comando "npm install". O próprio gerenciador de pacotes vai buscar um arquivo chamado "package.json" e instalar as configurações contidas lá;
+6. Caso não tenha instalado, use o comando "npm install -g @angular/cli" para poder usar linhas de comando próprias do Angular.
+7. Rode o projeto em Angular com "ng serve -o";
+8. Copie o link que aparecer, e insira em seu navegador de preferência. Durante o desenvolvimento do projeto, tal link foi "http://localhost:4200/". Ele abria automaticamente em meu navegador padrão;
+FIM
+
+
+
 ENUNCIADO
 Este teste tem como objetivo avaliar suas habilidades nas linguagens Type Script e Python, utilizando os frameworks Angular 8, Django e Django Rest Framework. Também iremos avaliar suas habilidades em seguir tutoriais e aprendizado de novas tecnologias. Utilizando estes frameworks você deverá criar um aplicativo de TODO list.
 Requerimentos
