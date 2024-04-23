@@ -45,17 +45,19 @@ export class TodolistComponent {
       next: (data) => {
         this.selectedTask = data
         this.refreshCrud()
+        this.getAllTasks()
       },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: PUT task") }
     })
   }
-
+  
   createTask() {
     this.todoapi.createTask(this.selectedTask).subscribe({
       next: (data) => {
         this.task.push(data)
         this.refreshCrud()
+        this.getAllTasks()
       },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: POST task") }
@@ -65,8 +67,8 @@ export class TodolistComponent {
   deleteTask() {
     this.todoapi.deleteTask(this.selectedTask.id).subscribe({
       next: () => {
-        // this.getAllTasks()
         this.refreshCrud()
+        this.getAllTasks()
       },
       error: (err) => { console.log(err) },
       complete: () => { console.log("Success: DEL one task") }
@@ -75,13 +77,13 @@ export class TodolistComponent {
 
   refreshCrud() {
     // window.location.reload()
-    this.selectedTask = { task_title: '', task_completion: false, task_created_at: '', task_updated_at: ''  }
+    this.selectedTask = { task_title: '', task_completion: false, task_description: '', task_created_at: '', task_updated_at: ''  }
   }
 
   constructor (private todoapi: TodoapiService) {
     this.getAllTasks()
 
     //fills 'selectedTask' with empty info so it doesn't bug the page; opens empty fields for edition.
-    this.selectedTask = { task_title: '', task_completion: false, task_created_at: '', task_updated_at: ''  }
+    this.selectedTask = { task_title: '', task_completion: false, task_description: '', task_created_at: '', task_updated_at: ''  }
   }
 }

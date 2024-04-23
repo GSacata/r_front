@@ -46,7 +46,7 @@ body {
     /* background-image: linear-gradient(45deg, #FFFFEA, #FFFFB7); */
 }
 
-p, h1, div {
+p, h1, div, textarea {
     font-family: "Roboto Flex", sans-serif;
     color: var(--secondary);
 }
@@ -109,6 +109,21 @@ td {
 
 .tdlst-crud-tasktitle {
     width: 100%;
+    background-color: #e6f5fd;
+    color: var(--secondary);
+    border-radius: 3px;
+    border: solid 1px var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.tdlst-crud-taskdesc {
+    width: 100%;
+    background-color: #e6f5fd;
+    color: var(--secondary);
+    border-radius: 3px;
+    border: solid 1px var(--secondary);
+    height: 80px;
+    text-wrap: wrap;
 }
 
 .tdlst-crud-buttonsdiv {
