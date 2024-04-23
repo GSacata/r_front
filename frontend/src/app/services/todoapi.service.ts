@@ -18,21 +18,21 @@ export class TodoapiService {
     return this.http.get(this.baseurl + '/todolist/', {headers: this.httpHeaders})
   }
 
-  getOneTask(id: number): Observable <any> {
+  getOneTask(id: number): Observable <Object> {
     return this.http.get(this.baseurl + `/todolist/${id}`, {headers: this.httpHeaders})
   }
 
-  editTask(task: any): Observable <any> {
+  editTask(task: TodoTask): Observable <Object> {
     const body = {task_title: task.task_title, task_completion: task.task_completion,  task_description: task.task_description}
     return this.http.put(this.baseurl + `/todolist/${task.id}/`, body, {headers: this.httpHeaders})
   }
 
-  createTask(task: any): Observable <any> {
+  createTask(task: TodoTask): Observable <any> {
     const body = {task_title: task.task_title, task_completion: task.task_completion, task_description: task.task_description}
     return this.http.post(this.baseurl + `/todolist/`, body, {headers: this.httpHeaders})
   }
 
-  deleteTask(id: number): Observable <any> {
+  deleteTask(id: number): Observable <Object> {
     return this.http.delete(this.baseurl + `/todolist/${id}`, {headers: this.httpHeaders})
   }
 }
