@@ -66,7 +66,7 @@ td {
 
 .tdlst-body-div {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 2rem auto;
 }
 
@@ -175,7 +175,7 @@ td {
 .tdlst-task-textbody {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
 }
 
 .tdlst-task-addinfo {
